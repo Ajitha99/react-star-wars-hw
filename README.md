@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+### Intro
+In the lesson earlier you:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### instructions:
 
-## Available Scripts
+<li> Research documentation of <a href= "https://swapi.dev/documentation">SWAPI</a> to find the endpoint for the starships resource.</li>
+<li>Create a services/sw-api.js service module and ensure that all API/fetch calls are made from this module.
+<li>Use named exports to expose AJAX functionality as needed, e.g., export function getAllStarships() {...}to obtain all starships. </li>
+<li>Obtain all of the starships from the API and render in <App> a card for each starship.</li>
+<li>Cards should contain the text of the starship's name.</li>
+<br/>
+For example:
 
-In the project directory, you can run:
+<img src = "https://lh4.googleusercontent.com/aJSnGodNvQoqwZCDjPVV_YlAqBwvgIIcYw7JJrzRF0YcrafoKVeGMy9BhN8BtJrDbum98jo9D-yZZPhLouB5u1EFrrEIbIV1myymeyLvdM5xwNZnkPyKc935Ghrw_YGmyhx524Il"/>
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Hints
+Hold the starship objects in state with the useState hook, don't forget to initialize to an empty array!
+Use the useEffect hook to make the AJAX request once the app loads.
+Once the starship data comes from the API, be sure to update state with the setter function.
+Create and import a StarShipCard component into App.js.
+.map() over each starship object in state to transform them into a <StarshipCard /> component
+CORS issue? Try changing your /starships endpoint to /starships/ 👈 trust us on that one 😎.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Bonus
+Display additional details for each Starship in it's respectable card.
+This API has a pagination feature that allows you to get additional starships to display - find out how to use this to your advantage and allow users to get more starships at the click of a button
