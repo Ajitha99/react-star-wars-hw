@@ -1,0 +1,44 @@
+
+header{
+    background-color: black;
+    color: whitesmoke;
+    font-size: 45px;
+    font-weight: bolder;
+    border: 3px sold black;
+}
+
+.cards-div{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.cardDiv{
+    border: 1px solid whitesmoke;
+    border-radius: 2em;
+    margin-top: 50px;
+    margin-left: 30px;
+    width: 220px;
+    height: 220px;
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: x-large;
+    padding-top: 20px;
+}
+
+.cardDiv:hover{
+    color: black;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+#smallSpan{
+    font-size: small;
+    color:rgb(6, 109, 54);
+}
+p{
+    font-size: small;
+    font-weight: bolder;
+    text-overflow: auto;
+
+}
