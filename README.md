@@ -1,5 +1,4 @@
-### Intro
-In the lesson earlier you:
+
 
 ### instructions:
 
